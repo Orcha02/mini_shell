@@ -37,5 +37,7 @@ int main(__attribute__((unused))int ac, __attribute__((unused))char **av)
 			break;
 		printf("\n");
 	}
+	free(array);
+	free(line);
 	return (0);
 }
