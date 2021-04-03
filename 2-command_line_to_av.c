@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * split_line - function that splits a string and returns
+ * main - function that splits a string and returns
  * an array of each word of the string.
  * @ac: Argument count
  * @av: Argument value
@@ -18,7 +18,7 @@ int main(__attribute__((unused))int ac, __attribute__((unused))char **av)
 	char separator[] = {" "};
 
 	getline(&line, &l_len, stdin);
-        
+
 	for (i = 0; line[i] != '\0'; i++)
 	{
 		if (line[i] == separator[0])
@@ -26,16 +26,16 @@ int main(__attribute__((unused))int ac, __attribute__((unused))char **av)
 	}
 
 	array = malloc(sizeof(char *) * (count_tok + 1));
-        
+
 	tok = strtok(line, " ");
 	for (i = 0; tok != NULL; i++)
-        {
+	{
 		printf("%s", tok);
-                tok = strtok(NULL, " ");
-                array[0] = tok;
-                if (array[0] == NULL)
-                        break;
-                printf("\n");
-        }
-        return (0);
+		tok = strtok(NULL, " ");
+		array[0] = tok;
+		if (array[0] == NULL)
+			break;
+		printf("\n");
+	}
+	return (0);
 }

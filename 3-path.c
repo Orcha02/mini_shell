@@ -2,8 +2,12 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
-
-int main()
+/**
+ * main - function that prints each directory contained
+ * in the the environment variable PATH
+ * Return: One directory per line
+ */
+int main(void)
 {
 	char *path;
 	char *tok;
