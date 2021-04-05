@@ -14,11 +14,11 @@ int main(void)
 	int i;
 
 	path = getenv("PATH");
-	tok = strtok(path, "/");
+	tok = strtok(path, ":");
 	for (i = 0; tok != NULL; i++)
 	{
-		printf("/%s\n", tok);
-		tok = strtok(NULL, "/");
+		printf("%s\n", tok);
+		tok = strtok(NULL, ":");
 	}
 	tok = NULL;
 	return (0);
