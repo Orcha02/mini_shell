@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char *argv[] = {"/bin/ls", "-l", "/usr/", NULL};
+	char *argv[] = {"/bin/ls", "/usr/", "-l", NULL};
 
 	printf("Before execve\n");
 	if (execve(argv[0], argv, NULL) == -1)
