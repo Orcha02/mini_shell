@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <unistd.h>
-#include "headers.h"
 /**
- * exec - execve example
+ * main - execve example
  *
  * Return: Always 0.
  */
-int exec(void)
+int main(void)
 {
 	char *argv[] = {"/bin/ls", "-l", "/usr/", NULL};
 
